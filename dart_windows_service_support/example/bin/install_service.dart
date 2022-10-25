@@ -9,7 +9,7 @@ import '../lib/define.dart';
 
 void main(List<String> args) {
   final dartConnectServiceDLL = DartConnectServiceDLL(dllPath);
-  final servicePath = join(Directory.current.path, "service.exe");
+  final servicePath = normalize(join(dirname(Platform.script.toFilePath()), "service.exe"));
 
   dartConnectServiceDLL.dartInstallService(
     serviceName.toNativeUtf16().cast<Uint16>(),

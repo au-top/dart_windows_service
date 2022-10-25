@@ -2,5 +2,5 @@ import 'dart:io';
 
 import 'package:path/path.dart';
 
-final dllPath = join(Directory.current.path, "../../../dll/WindowsServiceDLL.dll");
+final dllPath = normalize(join(dirname(Platform.script.toFilePath()), "../../../dll/WindowsServiceDLL.dll"));
 const serviceName = "dartTestService";
