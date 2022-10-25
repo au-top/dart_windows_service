@@ -22,4 +22,4 @@ extern "C" __declspec(dllexport) void DartConnectService(
 );
 
 
-extern "C" void DartUninstallService(PCWSTR pszServiceName);
+extern "C" __declspec(dllexport) void DartUninstallService(PCWSTR pszServiceName);
