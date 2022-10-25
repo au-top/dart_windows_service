@@ -2,7 +2,7 @@
 
 use service mode running dart to windows
 
-`service_base`  provides windows api => lib
+`service_base` from  https://github.com/tromgy/service-base   provides windows api => lib
 
  |
 
