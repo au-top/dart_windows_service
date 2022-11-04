@@ -35,7 +35,7 @@ void main(List<String> args) {
     1,
     1,
     Pointer.fromAddress(0),
-    1
+    1,
   );
 }
 ```
