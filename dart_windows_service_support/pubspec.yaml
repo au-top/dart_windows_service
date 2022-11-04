@@ -1,8 +1,7 @@
 name: dart_windows_service_support
-description: dart to windows service 
+description: Support running dart as a Windows service
 version: 0.0.2
 repository: https://github.com/au-top/dart_windows_service
-publish_to: https://pub.dev/
 
 environment:
     sdk: ">=2.18.0 <3.0.0"
