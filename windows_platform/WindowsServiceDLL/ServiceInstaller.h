@@ -59,7 +59,8 @@ void InstallService(PCWSTR pszServiceName,
                     PCWSTR serviceCallPath,
                     BOOL bRegisterWithEventLog = TRUE,
                     DWORD dwNumMessageCategories = 0,
-                    PCWSTR pszMessageResourceFilePath = NULL
+                    PCWSTR pszMessageResourceFilePath = NULL,
+                    BOOL delayedStart = FALSE
                    );
 
 //

@@ -27,6 +27,12 @@
     <ClInclude Include="exportWindowsServiceDLLApi.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ServiceBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceInstaller.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="exportWindowsServiceDLLApi.cpp">
@@ -36,6 +42,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="BaseWindowsService.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceInstaller.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -17,15 +17,10 @@
 * WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 \***************************************************************************/
 
-#pragma region Includes
-#include <assert.h>
-#include <strsafe.h>
-
+#include "pch.h"
 #include "ServiceBase.h"
-#pragma endregion
 
 
-#pragma region Static Members
 
 // Initialize the singleton service instance.
 CServiceBase *CServiceBase::s_service = NULL;
@@ -628,4 +623,3 @@ void CServiceBase::WriteErrorLogEntry(PCWSTR pszFunction, DWORD dwError)
     WriteLogEntry(szMessage, EVENTLOG_ERROR_TYPE, m_dwErrorEventId, m_wErrorCategoryId);
 }
 
-#pragma endregion

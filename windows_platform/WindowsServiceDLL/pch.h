@@ -11,11 +11,7 @@
 #include "framework.h"
 
 #include <string>
-#ifdef _WIN64
-#pragma comment(lib, "service-base-64.lib")
-#else
-#pragma comment(lib, "service-base.lib")
-#endif // WIN64
-
-
+#include <assert.h>
+#include <strsafe.h>
+#include <iostream>
 #endif //PCH_H

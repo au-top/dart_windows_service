@@ -14,7 +14,8 @@ extern "C" __declspec(dllexport) void DartInstallService(PCWSTR pszServiceName,
     PCWSTR serviceCallPath,
     BOOL bRegisterWithEventLog,
     DWORD dwNumMessageCategories,
-    PCWSTR pszMessageResourceFilePath
+    PCWSTR pszMessageResourceFilePath,
+    BOOL delayedStart
 );
 
 extern "C" __declspec(dllexport) void DartConnectService(

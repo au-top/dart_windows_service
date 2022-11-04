@@ -15,7 +15,8 @@ extern "C" void DartInstallService(PCWSTR pszServiceName,
     PCWSTR serviceCallPath,
     BOOL bRegisterWithEventLog,
     DWORD dwNumMessageCategories,
-    PCWSTR pszMessageResourceFilePath
+    PCWSTR pszMessageResourceFilePath,
+    BOOL delayedStart
 ) {
 
     InstallService(pszServiceName,
@@ -29,7 +30,8 @@ extern "C" void DartInstallService(PCWSTR pszServiceName,
         serviceCallPath,
         bRegisterWithEventLog,
         dwNumMessageCategories,
-        pszMessageResourceFilePath
+        pszMessageResourceFilePath,
+        delayedStart
     );
 
 }

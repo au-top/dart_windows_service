@@ -3,16 +3,9 @@
 use service mode running dart to windows
 
 `service_base` from  <https://github.com/tromgy/service-base>   provides windows api => lib
-
- |
-
- v
+> in `dart_windows_service_support`
 
 `WindowsServiceDLL` Import the api in lib and package the API => dll
-
- |
-
- v
 
 `dart_windows_service_support` use `dart:ffi` access dll api
 
@@ -21,7 +14,7 @@ use service mode running dart to windows
 example global var
 
 ```dart
-final dllPath = join(Directory.current.path, "../../../dll/WindowsServiceDLL.dll");
+final dllPath = join(Directory.current.path, "../../../dll/WindowsServiceDLL64.dll");
 const serviceName = "dartTestService";
 ```
 
@@ -44,9 +37,10 @@ void main(List<String> args) {
 
     /// path
     servicePath.toNativeUtf16().cast<Uint16>(),
-    true,
+    1,
     1,
     Pointer.fromAddress(0),
+    1
   );
 }
 ```
@@ -84,11 +78,7 @@ See `dart_windows_service_support/example`
 
 ## Make dll `WindowsServiceDLL.dll`
 
-1. use VS2022 open `windows_platform\service_base` make project out `service-base.lib` file
-
-2. move `service-base.lib` to `windows_platform\WindowsServiceDLL\lib\service-base.lib`
-
-3. open project  `windows_platform\WindowsServiceDLL` make out `WindowsServiceDLL.dll`
+use VS2022 open  project  `windows_platform\WindowsServiceDLL` make out `WindowsServiceDLL.dll`
 
 > Complete the compilation of dll
 >

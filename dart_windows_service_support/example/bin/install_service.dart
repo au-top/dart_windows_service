@@ -23,8 +23,9 @@ void main(List<String> args) {
 
     /// path
     servicePath.toNativeUtf16().cast<Uint16>(),
-    true,
+    1,
     1,
     Pointer.fromAddress(0),
+    1,
   );
 }

@@ -9,7 +9,7 @@
 example global var
 
 ```dart
-final dllPath = join(Directory.current.path, "../../../dll/WindowsServiceDLL.dll");
+final dllPath = join(Directory.current.path, "../../../dll/WindowsServiceDLL64.dll");
 const serviceName = "dartTestService";
 ```
 
@@ -32,9 +32,10 @@ void main(List<String> args) {
 
     /// path
     servicePath.toNativeUtf16().cast<Uint16>(),
-    true,
+    1,
     1,
     Pointer.fromAddress(0),
+    1
   );
 }
 ```

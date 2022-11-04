@@ -13,9 +13,10 @@ typedef CDartInstallService = ffi.Void Function(
   PCWSTR pszAccount,
   PCWSTR pszPassword,
   PCWSTR serviceCallPath,
-  ffi.Bool bRegisterWithEventLog,
+  ffi.Int bRegisterWithEventLog,
   DWORD dwNumMessageCategories,
   PCWSTR pszMessageResourceFilePath,
+  ffi.Int delayedStart,
 );
 
 typedef DartInstallService = void Function(
@@ -28,9 +29,10 @@ typedef DartInstallService = void Function(
   PCWSTR pszAccount,
   PCWSTR pszPassword,
   PCWSTR serviceCallPath,
-  bool bRegisterWithEventLog,
+  int bRegisterWithEventLog,
   int dwNumMessageCategories,
   PCWSTR pszMessageResourceFilePath,
+  int delayedStart,
 );
 
 typedef CDartConnectService = ffi.Void Function(PCWSTR);

@@ -15,9 +15,8 @@
 * WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 \***************************************************************************/
 
-#pragma region "Includes"
 #include "ServiceInstaller.h"
-#pragma endregion
+#include "pch.h"
 
 //
 //   FUNCTION: InstallService
@@ -52,7 +51,8 @@ void InstallService(PCWSTR pszServiceName,
                     PCWSTR serviceCallPath,
                     BOOL bRegisterWithEventLog,
                     DWORD dwNumMessageCategories,
-                    PCWSTR pszMessageResourceFilePath
+                    PCWSTR pszMessageResourceFilePath,
+                    BOOL delayedStart
                    )
 {
     wchar_t wszPath[MAX_PATH];
@@ -95,6 +95,7 @@ void InstallService(PCWSTR pszServiceName,
     {
         // Add service description
         SERVICE_DESCRIPTION sd;
+
         wchar_t wszDesc[1024];
 
         wcsncpy_s(wszDesc, _countof(wszDesc), pszDescription, _TRUNCATE);
@@ -105,6 +106,16 @@ void InstallService(PCWSTR pszServiceName,
         {
             wprintf(L"Couldn't set service description with error code: 0x%08lx\n", GetLastError());
             goto Cleanup;
+        }
+
+        if (delayedStart) {
+            SERVICE_DELAYED_AUTO_START_INFO sdasi = { delayedStart };
+            if (!ChangeServiceConfig2(schService, SERVICE_CONFIG_DELAYED_AUTO_START_INFO, &sdasi))
+            {
+                wprintf(L"Couldn't set service delayed auto start with error code: 0x%08lx\n", GetLastError());
+                goto Cleanup;
+            }
+
         }
 
         // Register service with event logger (optional)
