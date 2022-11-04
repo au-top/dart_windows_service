@@ -93,3 +93,9 @@ See `dart_windows_service_support/example`
 > Complete the compilation of dll
 >
 > Note that the x86/x64 options for dll and lib compilation should be unified
+
+## Other
+
+Inspired by
+
+<https://stackoverflow.com/questions/21056419/how-do-you-run-a-dart-application-as-a-windows-service/63744433#63744433>
