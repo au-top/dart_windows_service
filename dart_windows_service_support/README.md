@@ -2,6 +2,8 @@
 
 `dart_windows_service_support` use `dart:ffi` access dll api
 
+**need `WindowsServiceDLL.dll` support  download file for `https://github.com/au-top/dart_windows_service/releases` or clone git repository make project**
+
 ## Example
 
 example global var

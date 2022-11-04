@@ -1,8 +1,8 @@
-# DartWindowsService
+# Dart Windows Service ⚙
 
 use service mode running dart to windows
 
-`service_base` from  https://github.com/tromgy/service-base   provides windows api => lib
+`service_base` from  <https://github.com/tromgy/service-base>   provides windows api => lib
 
  |
 
@@ -81,3 +81,15 @@ void main(List<String> args) {
 ```
 
 See `dart_windows_service_support/example`
+
+## Make dll `WindowsServiceDLL.dll`
+
+1. use VS2022 open `windows_platform\service_base` make project out `service-base.lib` file
+
+2. move `service-base.lib` to `windows_platform\WindowsServiceDLL\lib\service-base.lib`
+
+3. open project  `windows_platform\WindowsServiceDLL` make out `WindowsServiceDLL.dll`
+
+> Complete the compilation of dll
+>
+> Note that the x86/x64 options for dll and lib compilation should be unified

@@ -14,4 +14,4 @@ dependencies:
     ffigen: ^7.2.0
     path: ^1.8.2
     dart_windows_service_support:
-      path: ..
+      path: ../
