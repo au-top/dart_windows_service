@@ -3,7 +3,7 @@
 use service mode running dart to windows
 
 `service_base` from  <https://github.com/tromgy/service-base>   provides windows api => lib
-> in `dart_windows_service_support`
+> in `WindowsServiceDLL`
 
 `WindowsServiceDLL` Import the api in lib and package the API => dll
 
