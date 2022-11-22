@@ -9,8 +9,8 @@
 example global var
 
 ```dart
-final dllPath = join(Directory.current.path, "../../../dll/WindowsServiceDLL64.dll");
-const serviceName = "dartTestService";
+final dllPath = normalize(join(dirname(Platform.script.toFilePath()), "../../../dll/WindowsServiceDLL64.dll"));
+const serviceName = "dart_test_service";
 ```
 
 `DartConnectServiceDLL.dartInstallService`  install service

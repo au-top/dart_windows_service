@@ -1,3 +1,7 @@
+# 0.0.5
+
+doc: update readme example
+
 # 0.0.4
 
 doc: update readme

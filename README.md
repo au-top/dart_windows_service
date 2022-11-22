@@ -2,7 +2,8 @@
 
 use service mode running dart to windows
 
-`service_base` from  <https://github.com/tromgy/service-base>   provides windows api => lib
+`service_base` from <https://github.com/tromgy/service-base> provides windows api => lib
+
 > in `WindowsServiceDLL`
 
 `WindowsServiceDLL` Import the api in lib and package the API => dll
@@ -14,11 +15,11 @@ use service mode running dart to windows
 example global var
 
 ```dart
-final dllPath = join(Directory.current.path, "../../../dll/WindowsServiceDLL64.dll");
-const serviceName = "dartTestService";
+final dllPath = normalize(join(dirname(Platform.script.toFilePath()), "../../../dll/WindowsServiceDLL64.dll"));
+const serviceName = "dart_test_service";
 ```
 
-`DartConnectServiceDLL.dartInstallService`  install service
+`DartConnectServiceDLL.dartInstallService` install service
 
 ```dart
 void main(List<String> args) {
@@ -45,7 +46,7 @@ void main(List<String> args) {
 }
 ```
 
-`DartConnectServiceDLL.dartConnectService`  connect service
+`DartConnectServiceDLL.dartConnectService` connect service
 
 ```dart
 
@@ -65,7 +66,7 @@ void run(String message) {
 
 ```
 
-`DartConnectServiceDLL.dartUninstallService`  uninstall service
+`DartConnectServiceDLL.dartUninstallService` uninstall service
 
 ```dart
 void main(List<String> args) {
@@ -78,7 +79,7 @@ See `dart_windows_service_support/example`
 
 ## Make dll `WindowsServiceDLL.dll`
 
-use VS2022 open  project  `windows_platform\WindowsServiceDLL` make out `WindowsServiceDLL.dll`
+use VS2022 open project `windows_platform\WindowsServiceDLL` make out `WindowsServiceDLL.dll`
 
 > Complete the compilation of dll
 >
